@@ -70,9 +70,11 @@ public class SinglyLinkedList {
     public int numberOccurrences(int data){
 
         int contador = 0;
+
         Node current = head;
         while (current != null) {
             if (current.data == data) {
+                
                 contador++;
             }
             current = current.next;

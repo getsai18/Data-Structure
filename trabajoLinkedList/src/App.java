@@ -8,12 +8,12 @@ public class App {
         lista.add(3);
         lista.add(5);
         lista.add(1);
-        System.out.println("==============");
+        System.out.println("---------------");
         lista.printList();
         lista.remove(5);
-        System.out.println("==============");
+        System.out.println("----------------");
         lista.printList();
-        System.out.println("==============");
+        System.out.println("---------------");
         System.out.println(lista.numberOccurrences(1));
     }
 }
