@@ -1,13 +1,26 @@
 public class App {
     public static void main(String[] args) throws Exception {
         DoubleLinkedList list= new DoubleLinkedList();
+        
+
+        list.add(10);
+        list.add(20);
+        list.add(30);
+        list.add(40);
+
+        System.out.println("Lista original:");
         list.printForward();
-        list.add(1);
-        list.add(2);
-        list.add(5);
-        list.add(6);
+
+        list.remove(10);
         list.printForward();
-        System.out.println("---imprimir backward---");
-        list.printBackward();
+
+        list.remove(30);
+        list.printForward();
+
+        list.remove(40);
+        list.printForward();
+
+        list.remove(100);
+        
     }
 }

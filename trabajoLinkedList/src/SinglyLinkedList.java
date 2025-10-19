@@ -8,16 +8,13 @@ public class SinglyLinkedList {
             head = newNode;
             return;
         }
-
         Node current = head;
         while (current.next != null) {//Recorrido de los nodos, hasta encontrar el ultimo
             
             current = current.next;
         }
-
         current.next = newNode;//Insertar nuevo nodo al final de la lista
     }
-
     public Boolean contains(int data){
         /*if (head == null) {
             System.out.println("La lista esta vacia.");
@@ -35,7 +32,6 @@ public class SinglyLinkedList {
 
         return false;
     }
-
     public void remove(int data){
 
         if (head == null) {//Pregunta si la lista esta vacia
@@ -55,7 +51,6 @@ public class SinglyLinkedList {
 
         current.next = current.next.next;//ASignamos el nodo corriente al siguiente
     }
-
     public void printList(){
         Node current = head;
         while (current != null) {
@@ -66,7 +61,6 @@ public class SinglyLinkedList {
         System.out.println("Null");
     }
 
-
     public int numberOccurrences(int data){
 
         int contador = 0;
@@ -74,7 +68,7 @@ public class SinglyLinkedList {
         Node current = head;
         while (current != null) {
             if (current.data == data) {
-                
+
                 contador++;
             }
             current = current.next;
