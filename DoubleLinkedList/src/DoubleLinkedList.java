@@ -71,15 +71,12 @@ public void remove(int data){
             System.out.println("Valor no encontrado");
             return;
         }
-
-        
         if(current == head){
             head = head.next;
             if(head != null){
                 head.prev = null;
             }
-        }
-         
+        } 
         else if(current.next == null){
             current.prev.next = null;
         }
