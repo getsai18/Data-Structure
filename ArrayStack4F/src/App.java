@@ -7,5 +7,7 @@ public class App {
         stack1.push('C'); 
         stack1.pop();
         stack1.print();
+        stack1.clear();
+        stack1.print();
     }
 }

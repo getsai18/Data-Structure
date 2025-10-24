@@ -43,10 +43,18 @@ public class ArrayStack<T> implements IStack<T>{
         return (T) data[top];
     }
 
+
+
+    //tarea implementar el metodo clear
     @Override
     public void clear() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'clear'");
+         
+    for (int i = 0; i < top; i++) {
+        data[i] = null;
+    }
+    
+    top = 0;
+       
     }
 
     @Override
