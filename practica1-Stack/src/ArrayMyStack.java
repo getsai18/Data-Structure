@@ -3,7 +3,7 @@ public class ArrayMyStack<T> implements MyStack<T> {
     int top;
 
     public ArrayMyStack(){
-        this(10);
+        this(50);
     }
 
     public ArrayMyStack(int Inicializacion){
@@ -70,10 +70,14 @@ public class ArrayMyStack<T> implements MyStack<T> {
     }
 
     @Override
-    public void push(T data) {
-        this.data[top++] = (T) data;
-        
+public void push(T data) {
+    if (top == this.data.length) {
+        Object[] nuevo = new Object[this.data.length * 2];
+        System.arraycopy(this.data, 0, nuevo, 0, this.data.length);
+        this.data = nuevo;
     }
+    this.data[top++] = data;
+}
 
     @Override
     public int size() {
