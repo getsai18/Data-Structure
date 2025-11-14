@@ -1,15 +1,15 @@
-import java.util.Arrays;
+
 import java.util.Scanner;
 
 public class App {
-    static String[] nombres;
-    static int[] calificaciones;
+    String[] nombres;
+    int[] calificaciones;
     Scanner sc = new Scanner(System.in);
     public static void main(String[] args) throws Exception {
         App main =new App();
         main.inicializar();
         main.llenarCampos();
-        sort(calificaciones);
+        sort(main.calificaciones, main.nombres);
     }
 
     
@@ -62,28 +62,32 @@ public class App {
     }
 
 
-    public static void sort(int[] arr){
-        int n = arr.length;
+    public static void sort(int[] calificaciones, String[] nombres){
+        int n = calificaciones.length;
 
         for(int i = 0; i < n -1; i++){
             int minIndex = i;// seleciona el primero menor
-            for(int j = i + 1; j < arr.length; j++){
-                if(arr[j] < arr[minIndex]){
+            for(int j = i + 1; j < calificaciones.length; j++){
+                if(calificaciones[j] < calificaciones[minIndex]){
                     minIndex = j;// indice del mmenor dentro de la parte no ordenada
                 }
             }
-            int temp = arr[minIndex];
-            arr[minIndex] = arr[i];
-            arr[i] = temp;
+            int temp = calificaciones[minIndex];
+            calificaciones[minIndex] = calificaciones[i];
+            calificaciones[i] = temp;
 
 
             String tem2  = nombres[minIndex];
             nombres[minIndex] = nombres[i];
             nombres[i] = tem2;
         }
-        for(int i = 0 ; i < arr.length; i++){
-            System.out.println(i+" -> "+nombres[i] +" tieness una calificacion de "+arr[i]);
+
+
+        System.out.println("\n--------------------------------");
+        for(int i = 0 ; i < calificaciones.length; i++){
+            System.out.println(i+" -> "+nombres[i] +" tieness una calificacion de "+calificaciones[i]);
         }
+        System.out.println("--------------------------------");
     }
 
 }
